@@ -7,32 +7,67 @@
 </head>
 <body>
     
-    <div class="overlayMenu">
+    <div id="overlayMenu">
         <label for="toggle" id="icon" class="now">
-            <span><img src="pict/contact.jpg"</span> <!--per halaman diganti-->
+            <span><img src="pict/contact.jpg"</span> <!--ganti gambar-->
         </label>
         <a href=home.html id="icon" class="hi">
             <span><img src="pict/hi.jpg"</span>
         </a>
         <input type="checkbox" name="" id="toggle">
         <div class="nav">
-            <ul>
+            <ul> <!--ganti active manual-->
                 <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html">About</a></li> 
                 <li><a href="porto.html">Portofolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
             </ul>
         </div>
+        
         <div id="isi">
             <div class="title">
-                <h1 align="center">CONTACT</h1> <!--per halaman diganti-->
+                <h1 align="center">CONTACT</h1> <!--ganti judul-->
             </div>
             <div class="content">
-                <p>Halo</p>
-                <p>Halo</p>
-                <p>Halo</p>
+                <div class="friend">
+                    <p>Let's Be Friends</p> 
+                </div>
+                <div id="highlight">
+                    <form id="form" action="loading.html" method="get">
+                        <div>
+                            <label>Name</label>
+                            <input placeholder="your name here" name="name" type="text"/>
+                        </div>
+                        <div>
+                            <label>Email</label>
+                            <input placeholder="your email here" name="email" type="email" />
+                        </div>
+                        <div>
+                            <label>Social Media</label>
+                            <input placeholder="any social media ?" name="media" type="text" />
+                        </div>
+                        <div>
+                            <label>Comment</label>
+                            <input placeholder="drop your comments here" name="comment" type="text" />
+                        </div>
+                        <div>
+                            <button type="submit">Done</button>
+                        </div>
+                        
+                    </form>
+                    <div class="pict">
+                        <img src="pict/painting-3.jpg">
+                    </div>
+                </div>
+                    
+                
             </div>
         </div>
+        
+    </div>
+    <br />
+    <div class="side">
+        <a href="mailto: support@me.com">Support Here</a>
     </div>
     
 </body>
