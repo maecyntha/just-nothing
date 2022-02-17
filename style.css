@@ -65,7 +65,7 @@ body {
     background-color: white;
     border: #FA8D62 3px solid;
     border-radius: 100px;
-    width: 80px;
+    width: 70px;
 }
 
 #icon.hi {
@@ -79,14 +79,14 @@ body {
     background-color: white;
     border: #FA8D62 3px solid;
     border-radius: 100px;
-    width: 80px;
+    width: 70px;
 }
 
 #icon img:hover {
-    transform: scale(1.2, 1.2);
-    -webkit-transform: scale(1.2, 1.2);
-    -moz-transform: scale(1.2, 1.2);
-    box-shadow: 0 0 20px #2B616D;
+    transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    box-shadow: 0 0 20px #fff;
     transition: 0.2s;
 }
 
@@ -468,14 +468,18 @@ input#toggle[type="checkbox"]:checked ~ div {
 #highlight #mini.big img {
     align-self: center;
     width: 350px;
+    transform: translateY(-15%);
 }
 
 .container {
+    margin-left: 40px;
     font-family: monospace;
     font-weight: 600;
+    font-size: 15px;
     background-color: #fff;
     width: 500px;
-    border-radius: 20px;
+    height: 430px;
+    border-radius: 10px 40px 10px 10px;
     margin-right: 30px;
     margin-bottom: 30px;
 }
@@ -487,7 +491,7 @@ input#toggle[type="checkbox"]:checked ~ div {
 
 .container .con-con {
     background-color: #FA8D62;
-    box-shadow: 5px 5px 5px #2B616D;
+    box-shadow: 5px 5px 5px #B2DBD5;
     color: #fff;
     padding: 15px;
 }
@@ -498,8 +502,12 @@ input#toggle[type="checkbox"]:checked ~ div {
 
 #highlight .additional {
     width: 300px;
+    height: 430px;
+    overflow: hidden;
+    border-radius: 40px 10px 10px 10px;
 }
 
 #highlight .additional img {
     width: 300px;
+    transform: translateY(-10%);
 }
