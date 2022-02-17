@@ -1,0 +1,505 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica;
+    width: 100%;
+    height: 100vh;
+    background: #B2DBD5;
+}
+
+#isi {
+    margin: 0px 170px 0 170px;
+    transform: translateY(-130%);
+    -webkit-transform: translateY(-130%);
+    -moz-transform: translateY(-130%);
+    transition: 0.5s;
+}
+
+#isi .title {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+#isi .title h1 { 
+    padding: 15px;
+    background-color: #fff;
+    color: #2B616D;
+    font-size: 16px;
+    letter-spacing: 5px;
+    font-weight: 600;
+    display: flex;
+    width: 700px; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    
+}
+
+#isi .content {
+    font-size: 20px;
+    margin-top: 20px;
+    padding-bottom: 50px;
+    position: fixed;
+}
+
+#overlayMenu {
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
+/*toggle icon*/
+#icon.now {
+    position: fixed;
+    right: 50px;
+    top: 30px;
+    z-index: 50;
+    cursor: pointer;
+}
+
+#icon.now img {
+    background-color: white;
+    border: #FA8D62 3px solid;
+    border-radius: 100px;
+    width: 80px;
+}
+
+#icon.hi {
+    position: fixed;
+    left: 50px;
+    top: 30px;
+    z-index: 80;
+}
+
+#icon.hi img {
+    background-color: white;
+    border: #FA8D62 3px solid;
+    border-radius: 100px;
+    width: 80px;
+}
+
+#icon img:hover {
+    transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    box-shadow: 0 0 20px #2B616D;
+    transition: 0.2s;
+}
+
+#icon.now img:active {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    transition: 0.2s;
+}
+
+#icon.hi img:active {
+    transform: scale(0.8, 0.8);
+    -webkit-transform: scale(0.8, 0.8);
+    -moz-transform: scale(0.8, 0.8);
+    transition: 0.2s;
+}
+
+#icon {
+    padding: 15px 25px;
+    display: inline-block; /*perlu gak?*/
+}
+
+/*checkbox*/ 
+input#toggle {
+    display: none;
+}
+
+/*navigation*/
+#overlayMenu .nav {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    padding: 20px 0;
+    background-color: #FA8D62;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transition: 0.4s;
+    border-radius:0 0 30px 30px;
+}
+
+#overlayMenu .nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+#overlayMenu .nav ul li a.active {
+    background-color: #B2DBD5;
+    border-radius: 18px;
+    color: #2B616D;
+    transition: 0.4s;
+}
+
+#overlayMenu .nav ul li a:hover {
+    background-color: #B2DBD5;
+    color: #2B616D;
+    border-radius: 18px;
+}
+
+#overlayMenu .nav ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1em;
+    padding: 10px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    width: 150px;
+}
+
+/*overlay menu display*/
+input#toggle[type="checkbox"]:checked ~ div {
+    transform: scale(1) translateY(0);
+    -webkit-transform: scale(1) translateY(0);
+    -moz-transform: scale(1) translateY(0);
+    z-index: 60;
+    transition: 0.5s;
+}
+
+/*side support button*/
+.side {
+    position: fixed;
+    bottom: 120px;
+}
+
+.side a {
+    height: 120px;
+    background: #2B616D;
+    color: #fff;
+    padding: 10px;
+    text-align-last: center;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    border-radius: 0 15px 15px 0;
+    border: #fff solid 3px;
+    border-left: none;
+}
+
+.side a:hover {
+    background-color: #21a3c0;
+    box-shadow: 0 0 20px #2B616D;
+    transform: scale(1.1, 1.1);
+    margin-left: 5px;
+    transition: 0.5s;
+}
+
+/*highlight*/
+#orange-highlight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 920px;
+    background-color: #FA8D62;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+#dark-highlight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 920px;
+    height: 45px;
+    background-color: #2B616D;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+/*HOME*/
+/*home content*/
+#orange-highlight .pict {
+    width: 450px;
+    height: 300px;
+    border-radius: 40px 200px 40px 30px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+#orange-highlight .pict img {
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+}
+
+#orange-highlight .sub {
+    width: 500px;
+    height: 180px;
+    padding-left: 20px;
+    padding-bottom: 50px;
+}
+
+#orange-highlight .sub p {
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #2B616D;
+    padding-left: 5px;
+}
+
+#orange-highlight .sub h1 {
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 110%;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: #2B616D;
+    padding: 15px 10px 20px 30px;
+    border-radius: 20px;
+    background-color: #fff;
+    width: 380px;
+}
+
+/*about me*/
+#orange-highlight .sub a {
+    padding: 10px 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    background-color: #fff;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #bba046;
+}
+
+.sub a:hover {
+    border: #2B616D solid 2px;
+    box-shadow: 0 0 8px #fff;
+    transition: 0.2s;
+}
+
+/*home social media*/
+#dark-highlight .logo {
+    cursor: pointer;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+#dark-highlight .logo img {
+    padding: 20px;
+    width: 20px;
+}
+
+/*facebook*/
+#dark-highlight .logo img.small {
+    padding: 20px;
+    width: 10px;
+}
+
+#dark-highlight .logo img:hover {
+    transform: scale(1.2, 1.2);
+    transition: 0.2s;
+}
+
+/*Contact*/
+
+.friend {
+    display: flex;
+    text-align: center;
+    margin: 0 40px 40px 40px;
+    margin-bottom: 30px;
+}
+
+.friend p {
+    font-family: 'Segoe UI';
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: #2B616D;
+    width: 820px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/*form*/
+
+#highlight {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#form {
+    text-align: center;
+    background-color: #FA8D62;
+    padding: 40px;
+    width: 400px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#form label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#form input {
+    align-items: center;
+    border: none;
+    height: 30px;
+    width: 400px;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-bottom: 25px;
+    padding: 5px;
+    outline: none; 
+}
+
+#highlight input::placeholder {
+    text-align: center;
+    font-weight: 700;
+    color: #B2DBD5;
+}
+
+#highlight button {
+    justify-self: center;
+    align-items: center;
+    font-weight: 600;
+    border: none;
+    height: 40px;
+    width: 150px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #FA8D62;
+}
+
+#highlight button:hover {
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#highlight .pict {
+    width: 400px;
+    border-radius: 40px 200px 40px 30px;
+    overflow: hidden;
+    margin-left: 40px;
+}
+
+#highlight .pict img {
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*loading page*/
+.welcome {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.welcome p {
+    font-family: 'Segoe UI'; font-weight: 700; font-size: 32px;
+    letter-spacing: 2px;
+    color: #fff; background-color: #FA8D62;
+    width: 970px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/*porto page*/
+
+#highlight #mini {
+    overflow: hidden;
+    margin: 0 15px 10px 15px;
+}
+
+#highlight #mini.normal {
+    border-radius: 40px;
+    width: 200px;
+    height: 200px;
+}
+
+#highlight #mini img {
+    width: 200px;
+}
+
+#highlight #mini:hover {
+    transform: scale(1.1, 1.1);
+    transition: 0.6s;
+}
+
+#highlight #mini.thin {
+    border-radius: 40px;
+    width: 250px;
+    height: 410px;
+}
+
+#highlight #mini.thin img {
+    width: 250px;
+}
+
+#highlight #mini.big {
+    border-radius: 30px;
+    width: 350px;
+    height: 130px;
+}
+
+#highlight #mini.big img {
+    align-self: center;
+    width: 350px;
+}
+
+.container {
+    font-family: monospace;
+    font-weight: 600;
+    background-color: #fff;
+    width: 500px;
+    border-radius: 20px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.container div.con-con {
+    margin: 30px 30px 2px 30px;
+    border-radius: 10px;
+}
+
+.container .con-con {
+    background-color: #FA8D62;
+    box-shadow: 5px 5px 5px #2B616D;
+    color: #fff;
+    padding: 15px;
+}
+
+.container .con-con p {
+    margin-left: 20px;
+}
+
+#highlight .additional {
+    width: 300px;
+}
+
+#highlight .additional img {
+    width: 300px;
+}
